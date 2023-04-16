@@ -55,6 +55,7 @@ www.alibabagroup.com
 aurora.tencent.com
 
 python3 ./cdn_identify.py --domain www.baidu.com
+或者
 python3 ./cdn_identify.py --domains domains.txt
 
 cat out.txt
