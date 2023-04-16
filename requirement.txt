@@ -1,0 +1,4 @@
+asyncio
+dnspython3
+netaddr
+numpy
