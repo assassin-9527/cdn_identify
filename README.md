@@ -45,16 +45,31 @@ Usage of cdn_identify.py:
         Toutput domains cdn check result to file
 ```
 
-单独使用
+使用命令
 
 ```
 $ cat domains.txt 
-www.baidu.com        //使用cdn
-www.qq.com         //使用cdn
-www.alibabagroup.com    //使用cdn
-aurora.tencent.com     //未使用cdn
+www.baidu.com
+www.qq.com
+www.alibabagroup.com
+aurora.tencent.com
+
 python3 ./cdn_identify.py --domain www.baidu.com
 python3 ./cdn_identify.py --domains domains.txt
+
+cat out.txt
+# 使用cdn的域名列表
+www.baidu.com
+www.qq.com
+www.alibabagroup.com
+
+# 未使用cdn的域名列表
+aurora.tencent.com
+
+# 未使用cdn的ip列表
+43.137.23.148
+
+runtime: 11s 
 
 
 **强烈推荐dns服务器列表使用自带的resolvers（均为国内dns服务器且验证可用），如果服务器数量过少，大量的dns查询会导致timeout，影响查询准确度**
