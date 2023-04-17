@@ -71,6 +71,7 @@ aurora.tencent.com
 43.137.23.148
 
 runtime: 11s 
+```
 
 
 **强烈推荐dns服务器列表使用自带的resolvers（均为国内dns服务器且验证可用），如果服务器数量过少，大量的dns查询会导致timeout，影响查询准确度**
