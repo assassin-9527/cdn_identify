@@ -1,4 +1,4 @@
-asyncio
+requests
 dnspython3
 netaddr
 numpy
