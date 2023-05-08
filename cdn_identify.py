@@ -95,7 +95,7 @@ class CdnCheck:
     def InCdnCnameList(self, domain_cname_list):
         for domain_cname in domain_cname_list:
             for cdn_cname in self.cdn_name_list:
-                if cdn_cname in domain_cname:
+                if domain_cname in cdn_cname:
                     return True
         return False
     
@@ -144,8 +144,7 @@ class CdnCheck:
                         if item.rdtype == rdatatype.A:
                             domain_ip_list.append(item.to_text())
                         elif item.rdtype == rdatatype.CNAME:
-                            # domain_cname_list.append(item.to_text()[:-1]) 去掉域名最后的点
-                            domain_cname_list.append(item.to_text())
+                            domain_cname_list.append(item.to_text().rstrip(".")) # 去掉域名最后的点
             except:
                 pass
             if len(domain_cname_list) == 0 and len(domain_ip_list) > 0:
