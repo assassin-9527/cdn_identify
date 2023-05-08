@@ -16,7 +16,7 @@
 
 
 
-本工具是 https://github.com/alwaystest18/cdnChecker.git 的python版，原版是go语言的写的，因为个人平时python用的更多，所以将该工具用python写了一份。
+本工具是 https://github.com/alwaystest18/cdnChecker.git 的python版，原版是go语言的写的，因为个人平时python用的更多，所以将该工具用python写了一份（版本为：python3.8.10）。
 
 
 
