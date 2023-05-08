@@ -153,7 +153,7 @@ class CdnCheck:
                 self.no_cdn_domains.append(domain)
                 self.no_cdn_ips.extend(domain_ip_list)
             elif len(domain_cname_list) > 0 and len(domain_ip_list) > 0:
-                if not self.InCdnCnameList(domain_cname_list):
+                if self.InCdnCnameList(domain_cname_list):
                     # cdn在cdn cname列表中包含，直接判定使用cdn
                     self.use_cdn_domains.append(domain)
                 else:
