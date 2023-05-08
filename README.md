@@ -25,7 +25,7 @@
 ```
 git https://github.com/assassin-9527/cdn_identify.git
 cd cdn_identify/
-pip install -r requirement.txt
+pip3 install -r requirement.txt
 python3 ./cdn_identify.py --domain www.baidu.com
 ```
 
