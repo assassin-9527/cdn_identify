@@ -69,6 +69,9 @@ class CdnCheck:
                 fd.write("\n\n")
             fd.write(f'runtime: {runtime}s\n')
 
+    def print_result(self, out_file_path):
+        with open(file=out_file_path, mode="r", encoding="utf-8") as fd:
+            print(fd.read())
 
     def getCDNDataFromCache(self):
         self.ranges = self.scrapeProjectDiscovery()
@@ -278,3 +281,4 @@ if __name__ == "__main__":
     endtime = datetime.datetime.now()
     runtime = (endtime - starttime).seconds
     check_obj.write_data2file(args.out_path, runtime)
+    check_obj.print_result(args.out_path)
